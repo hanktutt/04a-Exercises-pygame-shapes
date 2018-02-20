@@ -20,19 +20,18 @@ def main():
 	clock = pygame.time.Clock()
 
 	(x,y,radius) = (100,100,20)
-	
+	screen.fill(black)
 	while True:
 		clock.tick(FPS)
 
-		screen.fill(black)
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				pygame.quit()
 				sys.exit(0)
 			if event.type == pygame.MOUSEBUTTONUP:
 				pos = pygame.mouse.get_pos()
-		
-		pygame.draw.circle(screen, white, (x,y), radius)
+				print(pos)
+				pygame.draw.circle(screen, white, pos, radius)
 		
 		pygame.display.flip()
 

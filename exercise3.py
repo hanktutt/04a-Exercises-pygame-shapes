@@ -31,9 +31,10 @@ def main():
 				sys.exit(0)
 
 		print(datetime.now().time())
+		time = str(datetime.now().time())
 
-		text = "Hello World!"
-		f = font.render(text, True, white)
+		text = "Time:  "
+		f = font.render(text + time, True, white)
 		(fwidth,fheight) = font.size(text)
 		screen.blit(f,(x,y))
 		
